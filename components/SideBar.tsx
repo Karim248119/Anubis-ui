@@ -176,9 +176,9 @@ export default function SideBar() {
               path: "/components/sliders/invincible",
             },
             {
-              name: "Venice–Slider",
+              name: "Verical Scroll",
               icon: <TbBrandVue size={16} />,
-              path: "/components/sliders/venice",
+              path: "/components/sliders/vertical-scroll",
             },
             {
               name: "Gallery",
