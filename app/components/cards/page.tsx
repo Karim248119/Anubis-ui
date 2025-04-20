@@ -1,15 +1,15 @@
 import CodePreview from "@/components/CodePreview";
-import Card1 from "@/demo/cards/Card1";
-import Card10 from "@/demo/cards/Card10";
-import IceCube from "@/demo/cards/Card12";
-import Card2 from "@/demo/cards/Card2";
-import Card3 from "@/demo/cards/Card3";
-import Card4 from "@/demo/cards/Card4";
-import Card5 from "@/demo/cards/Card5";
-import Card6 from "@/demo/cards/Card6";
-import Card7 from "@/demo/cards/Card7";
-import Card8 from "@/demo/cards/Card8";
-import Card9 from "@/demo/cards/Card9";
+import Card1, { Card1Code } from "@/demo/cards/Card1";
+import Card10, { Card10Code } from "@/demo/cards/Card10";
+import IceCube, { IceCubeCode } from "@/demo/cards/Card12";
+import Card2, { Card2Code } from "@/demo/cards/Card2";
+import Card3, { Card3Code } from "@/demo/cards/Card3";
+import Card4, { Card4Code } from "@/demo/cards/Card4";
+import Card5, { Card5Code } from "@/demo/cards/Card5";
+import Card6, { Card6Code } from "@/demo/cards/Card6";
+import Card7, { Card7Code } from "@/demo/cards/Card7";
+import Card8, { Card8Code } from "@/demo/cards/Card8";
+import Card9, { Card9Code } from "@/demo/cards/Card9";
 import React from "react";
 import { IoLogoDesignernews } from "react-icons/io5";
 
@@ -17,7 +17,7 @@ export default function page() {
   return (
     <div className="grid grid-cols-2 gap-5">
       <CodePreview
-        code=""
+        code={Card1Code}
         component={
           <Card1
             id="01"
@@ -30,7 +30,7 @@ export default function page() {
         background="#222222"
       />
       <CodePreview
-        code=""
+        code={Card2Code}
         component={
           <Card2
             name="metal air earrings"
@@ -43,25 +43,25 @@ export default function page() {
         background="#FAF8F4"
       />
       <CodePreview
-        code=""
+        code={Card3Code}
         component={<Card3 index={0} />}
         componentClassName="h-[55vh]"
         background="#222222"
       />
       <CodePreview
-        code=""
+        code={Card4Code}
         component={<Card4 />}
         componentClassName="h-[55vh]"
       />
       <div className="col-span-2">
         <CodePreview
-          code=""
+          code={Card5Code}
           component={<Card5 />}
           componentClassName="h-[55vh]"
         />
       </div>
       <CodePreview
-        code=""
+        code={Card6Code}
         component={
           <div className="cursor-pointer">
             <Card6 />
@@ -71,19 +71,19 @@ export default function page() {
         background="#fff"
       />
       <CodePreview
-        code=""
+        code={Card7Code}
         component={<Card7 />}
         componentClassName="h-[55vh]"
         background="#e8e8e8"
       />
       <CodePreview
-        code=""
+        code={Card8Code}
         component={<Card8 />}
         componentClassName="h-[65vh]"
         background="#fff"
       />
       <CodePreview
-        code=""
+        code={Card9Code}
         component={
           <Card9
             name="Tilt pentdant lamp"
@@ -98,13 +98,13 @@ export default function page() {
         background="#FAF8F4"
       />
       <CodePreview
-        code=""
+        code={Card10Code}
         component={<Card10 />}
         componentClassName="h-[55vh]"
         background="#222222"
       />
       <CodePreview
-        code=""
+        code={IceCubeCode}
         component={<IceCube />}
         componentClassName="h-[55vh]"
         background="#222222"
