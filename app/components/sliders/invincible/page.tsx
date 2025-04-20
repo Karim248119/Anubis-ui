@@ -1,5 +1,7 @@
 import CodePreview from "@/components/CodePreview";
-import InvincibleSlider from "@/demo/sliders/Invincible";
+import InvincibleSlider, {
+  InvincibleSliderCode,
+} from "@/demo/sliders/Invincible";
 import React from "react";
 
 export default function page() {
@@ -7,7 +9,7 @@ export default function page() {
     <div className="w-full h-full">
       <CodePreview
         className="overflow-hidden"
-        code=""
+        code={InvincibleSliderCode}
         component={<InvincibleSlider />}
         componentClassName="h-[70vh] w-full"
         background="#4444"

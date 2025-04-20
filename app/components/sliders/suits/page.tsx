@@ -1,5 +1,5 @@
 import CodePreview from "@/components/CodePreview";
-import SuitsSlider from "@/demo/sliders/Suits";
+import SuitsSlider, { SuitsSliderCode } from "@/demo/sliders/Suits";
 import React from "react";
 
 export default function page() {
@@ -7,7 +7,7 @@ export default function page() {
     <div className="w-full h-full">
       <CodePreview
         className="overflow-hidden p-0"
-        code=""
+        code={SuitsSliderCode}
         component={<SuitsSlider />}
         componentClassName="h-[80vh] w-full"
         background="#000"

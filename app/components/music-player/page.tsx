@@ -1,12 +1,12 @@
 import CodePreview from "@/components/CodePreview";
-import MusicPlayer from "@/demo/Music Player/MusicPlayer";
+import MusicPlayer, { MusicPlayerCode } from "@/demo/Music Player/MusicPlayer";
 import React from "react";
 
 export default function page() {
   return (
     <div>
       <CodePreview
-        code=""
+        code={MusicPlayerCode}
         component={<MusicPlayer />}
         componentClassName="h-[80vh] w-full"
       />

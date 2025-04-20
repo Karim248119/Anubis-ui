@@ -1,5 +1,5 @@
 import CodePreview from "@/components/CodePreview";
-import JewellerySlider from "@/demo/sliders/Jewllery";
+import JewellerySlider, { jewelleryCode } from "@/demo/sliders/Jewllery";
 import MythSlider from "@/demo/sliders/Myth";
 import SuitsSlider from "@/demo/sliders/Suits";
 import TravelSlider from "@/demo/sliders/Travel";
@@ -10,7 +10,7 @@ export default function page() {
     <div className="w-full h-full">
       <CodePreview
         className="overflow-hidden p-0"
-        code=""
+        code={jewelleryCode}
         component={<JewellerySlider />}
         componentClassName="h-[80vh] w-full"
         background="#000"
