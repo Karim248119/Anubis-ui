@@ -17,7 +17,6 @@ import {
   CupSoda,
   Globe,
   Car,
-  Phone,
   Smartphone,
   Headphones,
   Shirt,
@@ -29,10 +28,9 @@ import {
 } from "lucide-react";
 import { GiRingBox, GiThroneKing, GiZeusSword } from "react-icons/gi";
 import { RiGlassesFill } from "react-icons/ri";
-import { TbBrandVue, TbZodiacLibra } from "react-icons/tb";
+import { TbBrandVue } from "react-icons/tb";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa6";
-import { CgScrollV, CgScrollH } from "react-icons/cg";
 
 // === Single Link Item ===
 const NavItem = ({
@@ -253,7 +251,7 @@ export default function SideBar() {
         <CollapsibleNavItem
           name="Randoms"
           icon={<Puzzle />}
-          basePath="/components/3d"
+          basePath="/components/randoms"
           subTabs={[
             {
               name: "GOT",
