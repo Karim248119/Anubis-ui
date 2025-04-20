@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250, 250, 250;
+    --foreground: 50, 50, 50;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 0, 0, 0;
+    --primary-foreground: 255, 255, 255;
+
+    --secondary: 0, 0, 0, 0.3;
+    --secondary-foreground: 255, 255, 255, 0.3;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36, 36, 36, 0.2;
+    --input: 255, 255, 255;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 5, 5, 5;
+    --foreground: 250, 250, 250;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 255, 255, 255;
+    --primary-foreground: 0, 0, 0;
+
+    --secondary: 255, 255, 255, 0.3;
+    --secondary-foreground: 0, 0, 0, 0.3;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240, 239, 238, 0.2;
+    --input: 240, 239, 238;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: "#000";
+    /* font-family: var(--font-mono); */
+  }
+}
+:root {
+  --main-color--: #00ffff;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(var(--foreground));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btn-15 {
+  border: none;
+  padding: 6px 12px;
+  font-size: 15px;
+  background: transparent;
+  color: var(--main-color--);
+  text-transform: uppercase;
+  border: 3px solid var(--main-color--);
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+
+/* input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+} */

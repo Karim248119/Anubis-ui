@@ -1,0 +1,11 @@
+Model Information:
+* title:	Silver Surfer
+* source:	https://sketchfab.com/3d-models/silver-surfer-4c361366174f44e18cc1838bef62cfaf
+* author:	alexlashko (https://sketchfab.com/alexlashko)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Silver Surfer" (https://sketchfab.com/3d-models/silver-surfer-4c361366174f44e18cc1838bef62cfaf) by alexlashko (https://sketchfab.com/alexlashko) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
