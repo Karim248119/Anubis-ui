@@ -158,7 +158,7 @@ export default function SideBar() {
             {
               name: "Jewellry",
               icon: <GiRingBox size={16} />,
-              path: "/components/sliders/jewellery",
+              path: "/components/sliders/jewelry",
             },
             {
               name: "Travel",

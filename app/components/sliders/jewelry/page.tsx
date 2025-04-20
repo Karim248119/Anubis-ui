@@ -1,8 +1,5 @@
 import CodePreview from "@/components/CodePreview";
-import JewellerySlider, { jewelleryCode } from "@/demo/sliders/Jewllery";
-import MythSlider from "@/demo/sliders/Myth";
-import SuitsSlider from "@/demo/sliders/Suits";
-import TravelSlider from "@/demo/sliders/Travel";
+import JewelrySlider, { JewelrySliderCode } from "@/demo/sliders/Jewllery";
 import React from "react";
 
 export default function page() {
@@ -10,8 +7,8 @@ export default function page() {
     <div className="w-full h-full">
       <CodePreview
         className="overflow-hidden p-0"
-        code={jewelleryCode}
-        component={<JewellerySlider />}
+        code={JewelrySliderCode}
+        component={<JewelrySlider />}
         componentClassName="h-[80vh] w-full"
         background="#000"
       />

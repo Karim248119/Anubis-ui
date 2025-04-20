@@ -51,7 +51,7 @@ const Items = [
   },
 ];
 
-const JewellerySlider = () => {
+const JewelrySlider = () => {
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
 
   const paginate = (newDirection: number) => {
@@ -150,7 +150,7 @@ const JewellerySlider = () => {
   );
 };
 
-export default JewellerySlider;
+export default JewelrySlider;
 
 type AnimatedYProps = {
   children: React.ReactNode;
@@ -185,7 +185,7 @@ const AnimatedY = ({
   );
 };
 
-export const jewelleryCode = `"use client";
+export const JewelrySliderCode = `"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
