@@ -1,31 +1,31 @@
+import { GoArrowDownRight } from "react-icons/go";
+
 export const Button1: React.FC<
   React.ButtonHTMLAttributes<HTMLButtonElement>
 > = ({ children, className, ...props }) => {
   return (
     <button
-      className={`w-52 h-10 border-2 hover:border-primary hover:bg-amber-400 rounded-full relative group overflow-hidden duration-700 z-10 ${className}`}
+      className={`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500  to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 ${className}`}
       {...props}
     >
-      <span className="h-full w-full rounded-full absolute bg-amber-400 -z-10 top-1/2 -translate-y-1/2 -translate-x-1/2 -left-1/2 group-hover:left-1/2 duration-300 ease-in-out" />
-      <span className=" font-sans font-normal text-sm uppercase tracking-widest">
-        {children}
-      </span>
+      <span className=" font-sans ">{children}</span>
+      <GoArrowDownRight className="group-hover:-rotate-45 duration-300" />
     </button>
   );
 };
 
-export const Button1Code = `export const Button1: React.FC<
+export const Button1Code = `import { GoArrowDownRight } from "react-icons/go";
+
+export const Button1: React.FC<
   React.ButtonHTMLAttributes<HTMLButtonElement>
 > = ({ children, className, ...props }) => {
   return (
     <button
-      className={\`w-52 h-10 border-2 hover:border-primary hover:bg-amber-400 rounded-full relative group overflow-hidden duration-700 z-10 \${className}\`}
+      className={\`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500  to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 \${className}\`}
       {...props}
     >
-      <span className="h-full w-full rounded-full absolute bg-amber-400 -z-10 top-1/2 -translate-y-1/2 -translate-x-1/2 -left-1/2 group-hover:left-1/2 duration-300 ease-in-out" />
-      <span className=" font-sans font-normal text-sm uppercase tracking-widest">
-        {children}
-      </span>
+      <span className=" font-sans ">{children}</span>
+      <GoArrowDownRight className="group-hover:-rotate-45 duration-300" />
     </button>
   );
 };`;

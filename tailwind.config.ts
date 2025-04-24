@@ -24,7 +24,7 @@ const config = {
     },
     extend: {
       colors: {
-        gray: "#cfcfcf",
+        gold: "#F8C86D",
         border: "rgba(var(--border))",
         input: "rgba(var(--input))",
         ring: "rgba(var(--ring))",

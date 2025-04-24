@@ -11,14 +11,14 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState("");
 
   const Links = [
-    { name: "resume", path: "#resume" },
-    { name: "Services", path: "#services" },
+    { name: "Home", path: "/" },
+    { name: "Components", path: "/components/buttons" },
     { name: "Projects", path: "#projects" },
     { name: "Contact", path: "#contact" },
   ];
 
   return (
-    <nav className="w-screen h-20 z-50 fixed top-0 left-0 bg-background  border-b">
+    <nav className="w-screen h-20 z-50 fixed top-0 left-0 bg-background  ">
       <div className="h-20 w-full flex justify-between absolute items-center flex-row top-0 left-0 px-8 xl:px-20 z-30">
         <Logo />
         <div className="sm:flex justify-center items-center gap-5 hidden navs font-bold">

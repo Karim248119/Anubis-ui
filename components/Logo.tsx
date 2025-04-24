@@ -14,11 +14,11 @@ export default function Logo() {
   const logoSrc = currentTheme === "dark" ? logo : darkLogo;
 
   return (
-    <div className="flex items-center text-lg gap-2 font-bold">
-      <div className="p-2 border rounded-lg text-2xl">
+    <div className="flex items-center text-lg gap- font-bold">
+      <div className="text-4xl scale-x-[-1] mr-[2px]">
         <GiAnubis />
       </div>
-      <span>AnubisUI</span>
+      <span>nubisUI</span>
     </div>
   );
 }

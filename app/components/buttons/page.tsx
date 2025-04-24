@@ -15,16 +15,17 @@ import {
 } from "@/demo/buttons/ContactButtons";
 import React from "react";
 import { Button10, Button10Code } from "@/demo/buttons/Btn10";
+import { Button11, Button11Code } from "@/demo/buttons/Btn11";
 
 export default function page() {
   return (
     <div className="grid grid-cols-2 gap-10">
-      <CodePreview code={Button1Code} component={<Button1>Button 1</Button1>} />
       <CodePreview
-        code={Button2Code}
-        component={<Button2>Button 2</Button2>}
-        background="#adadad"
+        code={Button1Code}
+        component={<Button1>Button 1</Button1>}
+        background="#fff"
       />
+      <CodePreview code={Button2Code} component={<Button2>Button 2</Button2>} />
       <CodePreview
         code={Button3Code}
         component={<Button3>Button 3</Button3>}
@@ -64,6 +65,10 @@ export default function page() {
         code={Button10Code}
         component={<Button10>Button 10</Button10>}
         background="#222222"
+      />
+      <CodePreview
+        code={Button11Code}
+        component={<Button11>Button 10</Button11>}
       />
 
       <CodePreview
