@@ -4,29 +4,29 @@ import { useRef, useState } from "react";
 
 const Items = [
   {
-    title: "Djoser’s Pyramid",
-    vid: "/collapse/v1.mp4",
-    des: "Djoser’s Step Pyramid in Saqqara is one of Egypt’s most iconic monuments—and rightfully so. It constitutes a significant historical turning point in ancient Egyptian funerary monuments, revolutionizing stone architecture and royal burials. In addition to its beauty and monumental scale, it is not only the very first pyramid that the ancient Egyptians ever built, but also the oldest known ancient Egyptian stone structure.",
+    title: "Step 1",
+    vid: "/collapse/v38.mp4",
+    des: "Download any needed assets or libraries",
   },
   {
-    title: "Goddess Ma'at",
-    vid: "/collapse/v2.mp4",
-    des: "Maat was the goddess of harmony, justice, and truth represented as a young woman. Sometimes she is depicted with wings on each arm or as a woman with an ostrich feather on her head.",
+    title: "Step 2",
+    vid: "/collapse/v8.mp4",
+    des: "Create a file for the component in your project",
   },
   {
-    title: "Valley of the kings",
-    des: `The Valley of the Kings, also known as the Valley of the Gates of the Kings, is an area in Egypt where, for a period of nearly 500 years from the Eighteenth Dynasty to the Twentieth Dynasty, rock-cut tombs were excavated for pharaohs and powerful nobles under the New Kingdom of ancient Egypt.`,
-    vid: "/collapse/v3.webm",
+    title: "Step 3",
+    des: `Simply copy the code from the example and paste it into your file.`,
+    vid: "/collapse/v29.mp4",
   },
   {
-    title: "Khufu's Tomb",
-    vid: "/collapse/v4.mp4",
-    des: "For the Old Kingdom the most characteristic form of tomb building was the true pyramid, the finest example of which is the Great Pyramid of King Khufu of the 4th dynasty, at Al-Jīzah.",
+    title: "Step 4",
+    vid: "/collapse/v22.mp4",
+    des: "Replace any needed assets & modify the code to fit your needs",
   },
 ];
 
 export default function Collapse() {
-  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(1);
 
   return (
     <div className="w-full h-[90vh]">
@@ -79,7 +79,7 @@ const CollapseItem = ({
   return (
     <div
       key={index}
-      className={`relative h-full rounded-lg overflow-hidden transition-[width] duration-700 ${
+      className={`relative h-full rounded-lg overflow-hidden transition-[width] duration-700 cursor-pointer border ${
         isActive ? "w-1/2" : "w-1/6"
       }`}
       onMouseEnter={() => setHoveredIndex(index)}
@@ -87,9 +87,10 @@ const CollapseItem = ({
       <video
         ref={vidroRef}
         loop
+        muted
         src={item.vid}
         className={`w-full h-full absolute top-0 left-0 object-cover rounded-lg z-0 duration-300 ${
-          isActive ? "brightness-75" : "brightness-50"
+          isActive ? "brightness-90" : "brightness-50"
         }`}
       />
       <div
@@ -99,21 +100,21 @@ const CollapseItem = ({
             : "opacity-0 delay-0 duration-200"
         }`}
       >
-        <h2 className="text-3xl mb-2 text-white/80 rotate-90 font-serif text-nowrap">
+        <h2 className="text-6xl mb-2 text-white/80 rotate-90 font-sans font-bold text-nowrap">
           {item.title}
         </h2>
       </div>
       <div
-        className={`w-2/3 h-full flex flex-col gap-5 justify-center p-5 text-white/70 relative z-10 ${
+        className={`w-2/3 h-full flex flex-col gap-5 justify-center p-5 text-white/90 relative z-10 ${
           isActive
             ? "opacity-100 delay-500 duration-500"
             : "opacity-0 delay-0 duration-200"
         } transition-opacity`}
       >
-        <h2 className="text-4xl font-bold  mb-2 text-white font-serif">
+        <h2 className="text-6xl  mb-2 text-white font-sans font-bold">
           {item.title}
         </h2>
-        <p className="font-sans font-extralight text-xs">{item.des}</p>
+        <p className="">{item.des}</p>
       </div>
     </div>
   );
