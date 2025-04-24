@@ -5,22 +5,22 @@ import { useRef, useState } from "react";
 const Items = [
   {
     title: "Djoser’s Pyramid",
-    img: "https://cdn.pixabay.com/video/2024/09/17/231869_large.mp4",
+    vid: "/collapse/v1.mp4",
     des: "Djoser’s Step Pyramid in Saqqara is one of Egypt’s most iconic monuments—and rightfully so. It constitutes a significant historical turning point in ancient Egyptian funerary monuments, revolutionizing stone architecture and royal burials. In addition to its beauty and monumental scale, it is not only the very first pyramid that the ancient Egyptians ever built, but also the oldest known ancient Egyptian stone structure.",
   },
   {
     title: "Goddess Ma'at",
-    img: "https://cdn.pixabay.com/video/2024/08/30/228825_large.mp4",
+    vid: "/collapse/v2.mp4",
     des: "Maat was the goddess of harmony, justice, and truth represented as a young woman. Sometimes she is depicted with wings on each arm or as a woman with an ostrich feather on her head.",
   },
   {
     title: "Valley of the kings",
     des: `The Valley of the Kings, also known as the Valley of the Gates of the Kings, is an area in Egypt where, for a period of nearly 500 years from the Eighteenth Dynasty to the Twentieth Dynasty, rock-cut tombs were excavated for pharaohs and powerful nobles under the New Kingdom of ancient Egypt.`,
-    img: "https://www.shutterstock.com/shutterstock/videos/3735889647/preview/stock-footage-ancient-egypt-pharaoh-s-passage-holographic-temple-loop-abstract-fantasy-immersive-appeal.webm",
+    vid: "/collapse/v3.webm",
   },
   {
     title: "Khufu's Tomb",
-    img: "https://cdn.pixabay.com/video/2021/06/30/79602-570129375_large.mp4",
+    vid: "/collapse/v4.mp4",
     des: "For the Old Kingdom the most characteristic form of tomb building was the true pyramid, the finest example of which is the Great Pyramid of King Khufu of the 4th dynasty, at Al-Jīzah.",
   },
 ];
@@ -58,7 +58,7 @@ const CollapseItem = ({
   item: {
     title: string;
     des: string;
-    img: string;
+    vid: string;
   };
   index: number;
   hoveredIndex: number;
@@ -87,7 +87,7 @@ const CollapseItem = ({
       <video
         ref={vidroRef}
         loop
-        src={item.img}
+        src={item.vid}
         className={`w-full h-full absolute top-0 left-0 object-cover rounded-lg z-0 duration-300 ${
           isActive ? "brightness-75" : "brightness-50"
         }`}

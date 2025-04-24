@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="w-screen h-full pt-20 !overflow-hidden">
       <Hero />
-      <Collapse />
-      <Three />
       <Slider />
+      <Three />
+      <Collapse />
     </main>
   );
 }
