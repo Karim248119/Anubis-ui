@@ -20,7 +20,7 @@ export default function Three() {
             variant="link"
             className="mt-20 -mb-10 w-fit"
           >
-            View Components
+            More 3D Models
           </Button>
         </div>
       </div>

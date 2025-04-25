@@ -1,5 +1,6 @@
 import "../globals.css";
 import Collapse from "./Collapse";
+import Footer from "./Footer";
 import Hero from "./Hero";
 import Slider from "./Slider";
 import Three from "./Three";
@@ -11,6 +12,7 @@ export default function Home() {
       <Slider />
       <Three />
       <Collapse />
+      <Footer />
     </main>
   );
 }

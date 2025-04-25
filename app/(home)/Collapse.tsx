@@ -5,33 +5,33 @@ import { useRef, useState } from "react";
 const Items = [
   {
     title: "Step 1",
-    vid: "/collapse/v38.mp4",
-    des: "Download any needed assets or libraries",
+    vid: "/collapse/1.mp4",
+    des: "Download any needed assets & install any needed libraries",
   },
   {
     title: "Step 2",
-    vid: "/collapse/v8.mp4",
-    des: "Create a file for the component in your project",
+    vid: "/collapse/2.mp4",
+    des: "Create a file for the component in your project & Simply copy the code from the example and paste it into your file.",
   },
   {
     title: "Step 3",
-    des: `Simply copy the code from the example and paste it into your file.`,
-    vid: "/collapse/v29.mp4",
+    vid: "/collapse/3.mp4",
+    des: "Replace the assets in the code with your own if needed & modify the code to fit your needs",
   },
-  {
-    title: "Step 4",
-    vid: "/collapse/v22.mp4",
-    des: "Replace any needed assets & modify the code to fit your needs",
-  },
+  // {
+  //   title: "Step 4",
+  //   vid: "/collapse/v22.mp4",
+  //   des: "Replace any needed assets & modify the code to fit your needs",
+  // },
 ];
 
 export default function Collapse() {
-  const [hoveredIndex, setHoveredIndex] = useState<number>(1);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   return (
     <div className="w-full h-[90vh]">
       <div className="w-[80%] m-auto h-full flex flex-col  justify-center gap-6">
-        <h2 className="text-6xl font-bold font-sans">Collapses</h2>
+        {/* <h2 className="text-6xl font-bold font-sans">Collapses</h2> */}
         <div className="w-full h-[60vh] flex gap-2">
           {Items.map((item, index) => (
             <CollapseItem
@@ -43,7 +43,13 @@ export default function Collapse() {
             />
           ))}
         </div>
-        <Button className="w-fit mt-10 self-end">View all collapses</Button>
+        <Button
+          variant="link"
+          href="/components/collapse"
+          className="w-fit mt-10 self-end"
+        >
+          View all collapse components
+        </Button>
       </div>
     </div>
   );
@@ -79,8 +85,8 @@ const CollapseItem = ({
   return (
     <div
       key={index}
-      className={`relative h-full rounded-lg overflow-hidden transition-[width] duration-700 cursor-pointer border ${
-        isActive ? "w-1/2" : "w-1/6"
+      className={`relative h-full rounded-lg overflow-hidden transition-[width] duration-700 cursor-pointer bg-black border ${
+        isActive ? "w-1/2" : "w-1/4"
       }`}
       onMouseEnter={() => setHoveredIndex(index)}
     >
@@ -89,29 +95,31 @@ const CollapseItem = ({
         loop
         muted
         src={item.vid}
-        className={`w-full h-full absolute top-0 left-0 object-cover rounded-lg z-0 duration-300 ${
-          isActive ? "brightness-90" : "brightness-50"
+        className={`absolute right-0 object-cover rounded-lg z-0 duration-300 ${
+          !isActive
+            ? "brightness-50 w-full h-full top-0"
+            : "brightness-90 w-2/3 h-2/3 top-5"
         }`}
       />
       <div
         className={`absolute top-0 left-0 w-full h-full flex flex-col gap-5 justify-center p-5 text-white z-10 ${
           !isActive
             ? "opacity-100 delay-500 duration-500"
-            : "opacity-0 delay-0 duration-200"
+            : "opacity-0 delay-0 duration-300"
         }`}
       >
-        <h2 className="text-6xl mb-2 text-white/80 rotate-90 font-sans font-bold text-nowrap">
+        <h2 className="text-6xl m-auto text-white rotate-90 font-sans font-semibold text-nowrap">
           {item.title}
         </h2>
       </div>
       <div
-        className={`w-2/3 h-full flex flex-col gap-5 justify-center p-5 text-white/90 relative z-10 ${
+        className={`w-2/3 h-2/3 flex flex-col gap-5 justify-end absolute bottom-10 left-0  p-5 text-white/90  z-10 ${
           isActive
             ? "opacity-100 delay-500 duration-500"
             : "opacity-0 delay-0 duration-200"
         } transition-opacity`}
       >
-        <h2 className="text-6xl  mb-2 text-white font-sans font-bold">
+        <h2 className="text-6xl  mb-2 text-white font-sans font-semibold">
           {item.title}
         </h2>
         <p className="">{item.des}</p>
