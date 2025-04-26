@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Theme from "../../hooks/ThemeProvider";
 import Navbar from "@/components/Navbar";
-import SideBar from "@/components/SideBar";
 import { Fonts } from "@/lib/fonts";
 
 export const metadata: Metadata = {
@@ -23,7 +22,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/anubis.svg" sizes="any" />
       </head>
-      <body className={`${Fonts.quicksand.className} flex default:dark`}>
+      <body
+        className={`${Fonts.quicksand.className} flex default:dark overflow-x-hidden`}
+      >
         <Theme>
           {isHomePage ? (
             children

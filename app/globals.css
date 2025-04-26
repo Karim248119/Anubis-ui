@@ -74,8 +74,13 @@
     @apply bg-background text-foreground;
     background-color: "#000";
     overflow-x: hidden;
+
     /* font-family: var(--font-mono); */
   }
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 :root {
   --main-color--: #00ffff;

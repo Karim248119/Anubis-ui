@@ -125,7 +125,7 @@ const Slider = () => {
 
   const index = ((page % Items.length) + Items.length) % Items.length;
   return (
-    <div className="w-full h-[90vh] flex justify-center items-center">
+    <div className="w-full h-[90vh] md:flex justify-center items-center hidden ">
       <div className="relative w-full h-full overflow-hidden flex md:flex-row flex-col items-center justify-center ">
         {/* content Section */}
         <div className="w-[80vw] h-[80vh] overflow-hidden relative ">
@@ -205,13 +205,13 @@ const Slider = () => {
           <div className="flex gap-2 ">
             <button
               onClick={() => paginate(-1)}
-              className="w-7 aspect-square border border-gold hover:bg-black hover:text-white rounded-full flex justify-center items-center duration-300"
+              className="w-7 aspect-square border border-gold hover:bg-gold hover:text-black rounded-full flex justify-center items-center duration-300"
             >
               <GoChevronLeft />
             </button>
             <button
               onClick={() => paginate(1)}
-              className="w-7 aspect-square border border-gold hover:bg-black hover:text-white rounded-full flex justify-center items-center duration-300"
+              className="w-7 aspect-square border border-gold hover:bg-gold hover:text-black rounded-full flex justify-center items-center duration-300"
             >
               <GoChevronRight />
             </button>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RiMenu3Fill } from "react-icons/ri";
 import DarkMode from "@/components/DarkMode";
 import Logo from "./Logo";
+import { GiAnubis } from "react-icons/gi";
 // import ThemeSwitch from "@/components/Switch";
 
 export default function Navbar() {
@@ -13,8 +14,8 @@ export default function Navbar() {
   const Links = [
     { name: "Home", path: "/" },
     { name: "Components", path: "/components/buttons" },
-    { name: "Projects", path: "#projects" },
-    { name: "Contact", path: "#contact" },
+    { name: "How It Works", path: "/#how" },
+    { name: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -45,26 +46,34 @@ export default function Navbar() {
       </div>
 
       <div
-        className="h-[100vh] w-[60vw] flex flex-col items-center justify-center py-3 overflow-hidden navs sm:hidden z-50 bg-primary text-xs text-center gap-2 font-semibold fixed top-0 transition-all ease duration-700"
-        style={{ left: IsOpened ? 0 : "-60vw" }}
+        className="w-full h-full flex fixed top-0 z-50 transition-all ease duration-700"
+        style={{ left: IsOpened ? 0 : "-100vw" }}
       >
-        <div className="-mt-10 mb-10">{/* <ThemeSwitch /> */}</div>
+        <div className="h-[100vh] w-[60vw] flex flex-col items-center justify-center py-3 overflow-hidden navs sm:hidden bg-gold text-xs text-center gap-2 font-semibold  ">
+          <div className="-mt-10 mb-5">
+            <GiAnubis size={80} color="black" />
+          </div>
 
-        {Links.map((link) => (
-          <Link
-            onClick={() => {
-              setActiveLink(link.name);
-              setIsOpened(false);
-            }}
-            key={link.name}
-            href={link.path}
-            className={`${
-              activeLink === link.name ? "font-extrabold" : ""
-            } font-medium capitalize text-background text-lg p-2`}
-          >
-            {link.name}
-          </Link>
-        ))}
+          {Links.map((link) => (
+            <Link
+              onClick={() => {
+                setActiveLink(link.name);
+                setIsOpened(false);
+              }}
+              key={link.name}
+              href={link.path}
+              className={`${
+                activeLink === link.name ? "font-extrabold" : ""
+              } font-medium capitalize text-background text-lg p-2`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+        <button
+          className="h-[100vh] w-[40vw] "
+          onClick={() => setIsOpened(false)}
+        ></button>
       </div>
     </nav>
   );

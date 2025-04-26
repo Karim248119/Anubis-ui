@@ -5,11 +5,13 @@ import React from "react";
 
 export default function Three() {
   return (
-    <div className="w-full h-[80vh] grid grid-cols-3 px-20 ">
+    <div className="w-full md:h-[80vh] h-[100vh] grid md:grid-cols-3 md:grid-rows-1 grid-rows-2 md:px-20 px-5 pt-10">
       <div className="w-full h-full flex justify-center items-center col-span-2">
-        <div className="w-2/3 space-y-4">
-          <h2 className="text-6xl font-bold font-sans">3D Models</h2>
-          <p className="text-foreground/60">
+        <div className="md:w-2/3 space-y-4">
+          <h2 className="md:text-6xl text-2xl font-bold font-sans">
+            3D Models
+          </h2>
+          <p className="text-foreground/60 md:text-base text-xs">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex
             cum laudantium, debitis eos, ea eveniet, aperiam dicta eligendi
             molestiae laborum assumenda dolores exercitationem! Sequi

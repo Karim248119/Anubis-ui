@@ -19,7 +19,7 @@ export default function ModelCanvas({
   animationName?: string;
 }) {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative cursor-grab">
       <Canvas shadows camera={{ position: [3, 0, 3], fov: 50 }}>
         <ambientLight intensity={3} />
         <directionalLight position={[5, 5, 5]} intensity={1} castShadow />

@@ -1,4 +1,5 @@
 import "../globals.css";
+import Cards from "./Cards";
 import Collapse from "./Collapse";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="w-screen h-full pt-20 !overflow-hidden">
       <Hero />
+      <Cards />
       <Slider />
       <Three />
       <Collapse />

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="w-full h-[80vh] relative flex justify-center items-center">
+    <div className="w-full h-[80vh] relative flex justify-center items-center bg-black">
       <img
         src="/anubis.jpg"
         alt="hero"
@@ -13,11 +13,11 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-sans font-bold tracking-tight">
           Andubis UI
         </h1>
-        <p className="mt-8 mb-14 text-lg md:text-xl text-white/70 ">
+        <p className="mt-8 mb-14 md:text-xl text-sm text-white/70 ">
           A futuristic UI library combining sleek design and developer-first
           components.
         </p>
-        <Button variant="link" className="w-96">
+        <Button variant="link" className="md:w-96 w-60">
           Get Started
         </Button>
       </div>

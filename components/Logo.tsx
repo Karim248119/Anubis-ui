@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import logo from "@/public/logo.png";
 import darkLogo from "@/public/logo-dark.png";
 import { GiAnubis } from "react-icons/gi";
+import Link from "next/link";
 
 export default function Logo() {
   const { theme, resolvedTheme } = useTheme();
@@ -14,11 +15,11 @@ export default function Logo() {
   const logoSrc = currentTheme === "dark" ? logo : darkLogo;
 
   return (
-    <div className="flex items-center text-lg gap- font-bold">
+    <Link href="/" className="flex items-center text-lg gap- font-bold">
       <div className="text-4xl scale-x-[-1] mr-[2px]">
         <GiAnubis />
       </div>
       <span>nubisUI</span>
-    </div>
+    </Link>
   );
 }

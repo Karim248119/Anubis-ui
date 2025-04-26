@@ -36,15 +36,18 @@ const links = [
 ];
 export default function Footer() {
   return (
-    <footer className="h-[30vh] w-full mt-24 flex justify-center items-center relative">
+    <footer
+      id="contact"
+      className="h-[30vh] w-full mt-24 flex justify-center items-center relative"
+    >
       <div className="h-[0.5px] w-[100%] bg-gradient-to-r from-background via-foreground/20 to-background absolute top-0" />
-      <div className="flex gap-4">
+      <div className="flex md:gap-4 gap-2">
         {links.map((link, i) => (
           <a
             key={i}
             href={link.href}
             target="_blank"
-            className="relative group overflow-hidden flex justify-center items-center gap-2 text-lg border rounded-full w-10 h-10 hover:bg-hover duration-300"
+            className="relative group overflow-hidden flex justify-center items-center gap-2 md:text-lg border hover:border-gold rounded-full md:w-10 w-8 aspect-square hover:bg-hover duration-300"
           >
             <span className="absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2 group-hover:bottom-full group-hover:-translate-y-0 duration-300">
               {link.icon}
