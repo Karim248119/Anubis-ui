@@ -1,89 +1,103 @@
 export const Music = [
   {
     title: "perhaps",
+    artist: "Doris Day",
     src: "/music/p.mp3",
     imgsrc: "/music/imgs/p.jpg",
   },
   {
     title: "mary on a cross",
+    artist: "Ghost",
     src: "/music/moac.mp3",
     imgsrc: "/music/imgs/moac.jpg",
   },
   {
     title: "love story",
+    artist: "Indila",
     src: "/music/ls.mp3",
     imgsrc: "/music/imgs/ls.jpg",
   },
   {
     title: "I wanna be yours",
+    artist: "Arctic Monkeys",
     src: "/music/iwby.mp3",
     imgsrc: "/music/imgs/iwby.jpg",
   },
   {
     title: "questions on my mind",
+    artist: "Unknown",
     src: "/music/qomm.mp3",
     imgsrc: "/music/imgs/qomm.jpg",
   },
   {
     title: "She looks just like a dream",
+    artist: "JVKE",
     src: "/music/sljlad.mp3",
     imgsrc: "/music/imgs/sljlad.jpg",
   },
   {
     title: "just a cigarite",
+    artist: "Rusty Clanton",
     src: "/music/jac.mp3",
     imgsrc: "/music/imgs/jac.jpg",
   },
   {
     title: "sweater weather",
+    artist: "The Neighbourhood",
     src: "/music/sw.mp3",
     imgsrc: "/music/imgs/sw.jpg",
   },
   {
     title: "Perfect girl",
+    artist: "Mareux",
     src: "/music/pg.mp3",
     imgsrc: "/music/imgs/pg.jpg",
   },
-
   {
     title: "Counting stars",
+    artist: "OneRepublic",
     src: "/music/cs.mp3",
     imgsrc: "/music/imgs/cs.jpg",
   },
   {
     title: "disfruto",
+    artist: "Carla Morrison",
     src: "/music/d.mp3",
     imgsrc: "/music/imgs/d.jpg",
   },
-
   {
     title: "the night we met",
+    artist: "Lord Huron",
     src: "/music/tnwm.mp3",
     imgsrc: "/music/imgs/tnwm.jpg",
   },
-
   {
     title: "just the two of us",
+    artist: "Bill Withers & Grover Washington Jr.",
     src: "/music/jttou.mp3",
     imgsrc: "/music/imgs/jttou.jpg",
   },
   {
     title: "Too sweet",
+    artist: "Hozier",
     src: "/music/ts.mp3",
     imgsrc: "/music/imgs/ts.jpg",
   },
   {
     title: "We fell in love in october",
+    artist: "girl in red",
     src: "/music/o.mp3",
     imgsrc: "/music/imgs/o.jpg",
   },
   {
     title: "505",
+    artist: "Arctic Monkeys",
     src: "/music/505.mp3",
     imgsrc: "/music/imgs/505.jpg",
   },
   {
     title: "frences forever",
+    artist: "Mitski",
     src: "/music/ff.mp3",
     imgsrc: "/music/imgs/ff.jpg",
   },

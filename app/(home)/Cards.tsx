@@ -24,7 +24,7 @@ const Items = [
 
 export default function Cards() {
   return (
-    <div className="w-full md:md:h-[80vh] h-fit flex justify-center items-center">
+    <div className="w-full md:md:h-[80vh] h-fit flex justify-center items-center ">
       <div className="w-2/3 md:h-[55vh] h-[120vh] grid md:grid-cols-3 md:grid-rows-1 grid-rows-3 md:gap-10 gap-5 font-sans">
         {Items.map((item, i) => (
           <div

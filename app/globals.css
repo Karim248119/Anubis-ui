@@ -131,3 +131,26 @@ input[type="range"]::-moz-range-thumb {
   background: transparent;
   border: none;
 } */
+
+.hide-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.hide-thumb::-moz-range-thumb {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.hide-thumb::-ms-thumb {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}

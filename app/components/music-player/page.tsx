@@ -8,7 +8,7 @@ export default function page() {
       <CodePreview
         code={MusicPlayerCode}
         component={<MusicPlayer />}
-        componentClassName="h-[80vh] w-full"
+        componentClassName="h-[90vh] w-full"
       />
     </div>
   );
