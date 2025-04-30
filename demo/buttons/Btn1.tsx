@@ -5,7 +5,7 @@ export const Button1: React.FC<
 > = ({ children, className, ...props }) => {
   return (
     <button
-      className={`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500  to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 ${className}`}
+      className={`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500 text-white to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 ${className}`}
       {...props}
     >
       <span className=" font-sans ">{children}</span>
@@ -21,7 +21,7 @@ export const Button1: React.FC<
 > = ({ children, className, ...props }) => {
   return (
     <button
-      className={\`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500  to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 \${className}\`}
+      className={\`w-52 h-10 bg-black hover:bg-gradient-to-r from-blue-500 text-white to-black ho rounded-xl flex justify-center items-center gap-2 group duration-700 \${className}\`}
       {...props}
     >
       <span className=" font-sans ">{children}</span>

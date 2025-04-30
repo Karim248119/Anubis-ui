@@ -3,6 +3,8 @@ import Collapse1, { Collapse1Code } from "@/demo/collapse/Collapse1";
 import Collapse2, { Collapse2Code } from "@/demo/collapse/Collapse2";
 import Collapse3, { Collapse3Code } from "@/demo/collapse/Collapse3";
 import Collapse4, { Collapse4Code } from "@/demo/collapse/Collapse4";
+import Collapse5 from "@/demo/collapse/Collapse5";
+import Collapse6 from "@/demo/collapse/Collapse6";
 import React from "react";
 
 export default function page() {
@@ -32,6 +34,18 @@ export default function page() {
         component={<Collapse4 />}
         componentClassName="h-[65vh]"
         background="#000"
+      />
+      <CodePreview
+        code={Collapse4Code}
+        component={<Collapse5 />}
+        componentClassName="h-[70vh]"
+        background="#fff"
+      />
+      <CodePreview
+        code={Collapse4Code}
+        component={<Collapse6 />}
+        componentClassName="h-[90vh]"
+        background="#fff"
       />
     </div>
   );

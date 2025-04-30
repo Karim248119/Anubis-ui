@@ -2,8 +2,10 @@ import CodePreview from "@/components/CodePreview";
 import Card1, { Card1Code } from "@/demo/cards/Card1";
 import Card10, { Card10Code } from "@/demo/cards/Card10";
 import IceCube, { IceCubeCode } from "@/demo/cards/Card12";
-import Card13 from "@/demo/cards/Card13";
-import Card14 from "@/demo/cards/Card14";
+import Card13, { Card13Code } from "@/demo/cards/Card13";
+import Card14, { Card14Code } from "@/demo/cards/Card14";
+import Card15, { Card15Code } from "@/demo/cards/Card15";
+import Card16 from "@/demo/cards/Card16";
 import Card2, { Card2Code } from "@/demo/cards/Card2";
 import Card3, { Card3Code } from "@/demo/cards/Card3";
 import Card4, { Card4Code } from "@/demo/cards/Card4";
@@ -112,13 +114,23 @@ export default function page() {
         background="#222222"
       />
       <CodePreview
-        code={""}
+        code={Card13Code}
         component={<Card13 />}
         componentClassName="h-[70vh]"
       />
       <CodePreview
-        code={""}
+        code={Card14Code}
         component={<Card14 />}
+        componentClassName="h-[70vh]"
+      />
+      <CodePreview
+        code={Card15Code}
+        component={<Card15 />}
+        componentClassName="h-[70vh]"
+      />
+      <CodePreview
+        code={""}
+        component={<Card16 />}
         componentClassName="h-[70vh]"
       />
     </div>

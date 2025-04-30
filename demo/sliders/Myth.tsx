@@ -155,19 +155,20 @@ const MythSlider = () => {
                 {chapters[current]?.description || "No description available."}
               </motion.p>
 
-              <div className="flex gap-2">
-                <Button1
+              <div className="flex items-center gap-2">
+                <button
                   onClick={prevSlide}
                   className="md:w-10 h-10 flex justify-center items-center"
                 >
                   <GoChevronLeft />
-                </Button1>
-                <Button1
+                </button>
+                <span>/</span>
+                <button
                   onClick={nextSlide}
                   className="md:w-10 h-10 flex justify-center items-center"
                 >
                   <GoChevronRight />
-                </Button1>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -336,19 +337,20 @@ const MythSlider = () => {
                 {chapters[current]?.description || "No description available."}
               </motion.p>
 
-              <div className="flex gap-2">
-                <Button1
+              <div className="flex items-center gap-2">
+                <button
                   onClick={prevSlide}
                   className="md:w-10 h-10 flex justify-center items-center"
                 >
                   <GoChevronLeft />
-                </Button1>
-                <Button1
+                </button>
+                <span>/</span>
+                <button
                   onClick={nextSlide}
                   className="md:w-10 h-10 flex justify-center items-center"
                 >
                   <GoChevronRight />
-                </Button1>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>

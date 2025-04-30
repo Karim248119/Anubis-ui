@@ -25,12 +25,14 @@ import {
   Puzzle,
   Mouse,
   Images,
+  MousePointer,
 } from "lucide-react";
 import { GiRingBox, GiThroneKing, GiZeusSword } from "react-icons/gi";
 import { RiGlassesFill } from "react-icons/ri";
-import { TbBrandVue } from "react-icons/tb";
-import { MdOutlineTravelExplore } from "react-icons/md";
+import { GiTable } from "react-icons/gi";
+import { MdOutlineTableBar, MdOutlineTravelExplore } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa6";
+import { PiMouseScrollLight } from "react-icons/pi";
 
 // === Single Link Item ===
 const NavItem = ({
@@ -177,13 +179,18 @@ export default function SideBar() {
             },
             {
               name: "Verical Scroll",
-              icon: <TbBrandVue size={16} />,
+              icon: <PiMouseScrollLight size={16} />,
               path: "/components/sliders/vertical-scroll",
             },
             {
               name: "Gallery",
               icon: <Images size={16} />,
               path: "/components/sliders/gallery",
+            },
+            {
+              name: "Products",
+              icon: <MdOutlineTableBar size={16} />,
+              path: "/components/sliders/products",
             },
           ]}
         />
@@ -235,8 +242,6 @@ export default function SideBar() {
             },
           ]}
         />
-
-        <NavItem href="/components/forms" icon={<FormInput />} name="Forms" />
         <NavItem href="/components/navbars" icon={<Waves />} name="Navbars" />
         <NavItem
           href="/components/music-player"
@@ -245,7 +250,7 @@ export default function SideBar() {
         />
         <NavItem
           href="/components/custom-cursor"
-          icon={<Mouse />}
+          icon={<MousePointer />}
           name="Custom Cursor"
         />
         <CollapsibleNavItem

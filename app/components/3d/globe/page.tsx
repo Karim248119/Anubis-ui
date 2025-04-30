@@ -1,6 +1,6 @@
 import CodePreview from "@/components/CodePreview";
 import InstallCommand from "@/components/InstallCommand";
-import GlobeCanvas from "@/demo/3d/Globe";
+import GlobeCanvas, { GlobeCanvasCode } from "@/demo/3d/Globe";
 import StarsCanvas from "@/demo/3d/Stars";
 import React from "react";
 
@@ -9,13 +9,13 @@ export default function page() {
     <div className="w-full h-full space-y-5">
       <InstallCommand packages="@react-three/fiber@8.13.5 @react-three/drei@9.79.1" />
       <CodePreview
-        code=""
+        code={GlobeCanvasCode}
         component={<GlobeCanvas />}
         componentClassName="h-[70vh] w-full"
       />
 
       <CodePreview
-        code=""
+        code={GlobeCanvasCode}
         component={
           <GlobeCanvas
             model="/3d/globes/earth.glb"
@@ -26,7 +26,7 @@ export default function page() {
         componentClassName="h-[70vh] w-full "
       />
       <CodePreview
-        code=""
+        code={GlobeCanvasCode}
         component={
           <GlobeCanvas
             model="/3d/globes/earth_spots.glb"
@@ -37,7 +37,7 @@ export default function page() {
         componentClassName="h-[70vh] w-full "
       />
       <CodePreview
-        code=""
+        code={GlobeCanvasCode}
         component={
           <GlobeCanvas
             model="/3d/globes/sci.glb"

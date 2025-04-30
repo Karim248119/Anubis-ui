@@ -16,6 +16,9 @@ import {
 import React from "react";
 import { Button10, Button10Code } from "@/demo/buttons/Btn10";
 import { Button11, Button11Code } from "@/demo/buttons/Btn11";
+import { Button12, Button12Code } from "@/demo/buttons/Btn12";
+import { Button13, Button13Code } from "@/demo/buttons/Btn13";
+import { Button14, Button14Code } from "@/demo/buttons/Btn14";
 
 export default function page() {
   return (
@@ -25,7 +28,11 @@ export default function page() {
         component={<Button1>Button 1</Button1>}
         background="#fff"
       />
-      <CodePreview code={Button2Code} component={<Button2>Button 2</Button2>} />
+      <CodePreview
+        code={Button2Code}
+        component={<Button2>Button 2</Button2>}
+        background="#eeeeee"
+      />
       <CodePreview
         code={Button3Code}
         component={<Button3>Button 3</Button3>}
@@ -68,9 +75,23 @@ export default function page() {
       />
       <CodePreview
         code={Button11Code}
-        component={<Button11>Button 10</Button11>}
+        component={<Button11>Button 11</Button11>}
       />
-
+      <CodePreview
+        code={Button12Code}
+        component={<Button12>Button 12</Button12>}
+        background="#031228"
+      />{" "}
+      <CodePreview
+        code={Button13Code}
+        component={<Button13>Button 13</Button13>}
+        background="#031228"
+      />
+      <CodePreview
+        code={Button14Code}
+        component={<Button14>Button 14</Button14>}
+        background="#000"
+      />
       <CodePreview
         code={ShareButtonsCode}
         component={<ShareButtons />}

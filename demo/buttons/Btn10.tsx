@@ -6,7 +6,7 @@ export const Button10: React.FC<
       {...props}
       className={`relative w-52 h-10  md:mt-10 overflow-hidden p-[1px] rounded-full ${className}`}
     >
-      <span className="absolute rounded-full inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className="absolute rounded-full inset-[-500%] animate-[spin_1.5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#F8C86D_0%,#000_50%,#F8C86D_100%)]" />
       <span
         className="inline-flex h-full w-full cursor-pointer items-center justify-center 
              bg-slate-950 md:px-7 px-3 font-medium text-white backdrop-blur-3xl gap-2 rounded-full"
@@ -25,7 +25,7 @@ export const Button10Code = `export const Button10: React.FC<
       {...props}
       className={\`relative w-52 h-10  md:mt-10 overflow-hidden p-[1px] rounded-full \${className}\`}
     >
-      <span className="absolute rounded-full inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className="absolute rounded-full inset-[-500%] animate-[spin_1.5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#F8C86D_0%,#000_50%,#F8C86D_100%)]" />
       <span
         className="inline-flex h-full w-full cursor-pointer items-center justify-center 
              bg-slate-950 md:px-7 px-3 font-medium text-white backdrop-blur-3xl gap-2 rounded-full"
