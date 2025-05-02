@@ -1,7 +1,6 @@
 import CodePreview from "@/components/CodePreview";
 import H from "@/components/H";
 import InstallCommand from "@/components/InstallCommand";
-import SuitsSlider from "@/demo/sliders/Suits";
 import VerticalScrollSlider, {
   verticalSliderCode,
 } from "@/demo/sliders/VerticalScroll";

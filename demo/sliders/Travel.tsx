@@ -145,11 +145,11 @@ const TravelSlider = () => {
                     delay: 0.8,
                     ease: "easeOut",
                   }}
-                  className="w-[25%] h-[50%] flex flex-col justify-center items-center text-white relative shadow shadow-black"
+                  className="w-[25%] h-[50%] flex flex-col justify-center items-center text-white relative"
                 >
                   <Image
-                    width={500}
-                    height={1000}
+                    width={200}
+                    height={400}
                     src={location?.image}
                     alt={location?.name}
                     className="w-full h-full object-cover brightness-75"
@@ -348,7 +348,7 @@ const TravelSlider = () => {
                     delay: 0.8,
                     ease: "easeOut",
                   }}
-                  className="w-[25%] h-[50%] flex flex-col justify-center items-center text-white relative shadow shadow-black"
+                  className="w-[25%] h-[50%] flex flex-col justify-center items-center text-white relative"
                 >
                   <Image
                     width={500}

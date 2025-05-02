@@ -148,10 +148,10 @@ export default function MusicPlayer() {
                   }`}
                 />
                 <div className="flex flex-col">
-                  <h2 className="text-2xl font-semibold capitalize">
+                  <h2 className="max-w-36 text-xl font-semibold capitalize text-ellipsis overflow-hidden whitespace-nowrap">
                     {Music[index].title}
                   </h2>
-                  <p className="text-sm text-white/50">
+                  <p className="text-xs text-white/50">
                     {Music[index].artist || "Unknown"}
                   </p>
                 </div>

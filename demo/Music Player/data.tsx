@@ -25,7 +25,7 @@ export const Music = [
   },
   {
     title: "questions on my mind",
-    artist: "Unknown",
+    artist: "Faraj Suleiman",
     src: "/music/qomm.mp3",
     imgsrc: "/music/imgs/qomm.jpg",
   },
@@ -42,16 +42,16 @@ export const Music = [
     imgsrc: "/music/imgs/jac.jpg",
   },
   {
+    title: "just the two of us",
+    artist: "Bill Withers & Grover Washington Jr.",
+    src: "/music/jttou.mp3",
+    imgsrc: "/music/imgs/jttou.jpg",
+  },
+  {
     title: "sweater weather",
     artist: "The Neighbourhood",
     src: "/music/sw.mp3",
     imgsrc: "/music/imgs/sw.jpg",
-  },
-  {
-    title: "Perfect girl",
-    artist: "Mareux",
-    src: "/music/pg.mp3",
-    imgsrc: "/music/imgs/pg.jpg",
   },
   {
     title: "Counting stars",
@@ -72,23 +72,17 @@ export const Music = [
     imgsrc: "/music/imgs/tnwm.jpg",
   },
   {
-    title: "just the two of us",
-    artist: "Bill Withers & Grover Washington Jr.",
-    src: "/music/jttou.mp3",
-    imgsrc: "/music/imgs/jttou.jpg",
-  },
-  {
     title: "Too sweet",
     artist: "Hozier",
     src: "/music/ts.mp3",
     imgsrc: "/music/imgs/ts.jpg",
   },
-  {
-    title: "We fell in love in october",
-    artist: "girl in red",
-    src: "/music/o.mp3",
-    imgsrc: "/music/imgs/o.jpg",
-  },
+  // {
+  //   title: "We fell in love in october",
+  //   artist: "girl in red",
+  //   src: "/music/o.mp3",
+  //   imgsrc: "/music/imgs/o.jpg",
+  // },
   {
     title: "505",
     artist: "Arctic Monkeys",
@@ -100,5 +94,11 @@ export const Music = [
     artist: "Mitski",
     src: "/music/ff.mp3",
     imgsrc: "/music/imgs/ff.jpg",
+  },
+  {
+    title: "Wildflower",
+    artist: "Billie Eilish",
+    src: "/music/wf.mp3",
+    imgsrc: "/music/imgs/wf.png",
   },
 ];

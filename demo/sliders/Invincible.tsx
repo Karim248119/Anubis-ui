@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { Fonts } from "@/lib/fonts";
 import React from "react";
@@ -139,7 +138,7 @@ export default function InvincibleSlider() {
   );
 }
 
-export const InvincibleSliderCode = `/* eslint-disable @next/next/no-img-element */
+export const InvincibleSliderCode = `
 "use client";
 import { Fonts } from "@/lib/fonts";
 import React from "react";

@@ -1,11 +1,13 @@
 import CodePreview from "@/components/CodePreview";
-import InvincibleSlider from "@/demo/sliders/Invincible";
+import InstallCommand from "@/components/InstallCommand";
 import TravelSlider, { TravelSliderCode } from "@/demo/sliders/Travel";
 import React from "react";
 
 export default function page() {
   return (
     <div className="w-full h-full">
+      <InstallCommand packages={"framer-motion"} />
+
       <CodePreview
         className="overflow-hidden"
         code={TravelSliderCode}

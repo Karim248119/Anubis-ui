@@ -33,6 +33,7 @@ import { GiTable } from "react-icons/gi";
 import { MdOutlineTableBar, MdOutlineTravelExplore } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa6";
 import { PiMouseScrollLight } from "react-icons/pi";
+import { TbZodiacCapricorn } from "react-icons/tb";
 
 // === Single Link Item ===
 const NavItem = ({
@@ -153,9 +154,9 @@ export default function SideBar() {
           basePath="/components/sliders"
           subTabs={[
             {
-              name: "Greek",
-              icon: <GiZeusSword size={16} />,
-              path: "/components/sliders/greek",
+              name: "Zodiac",
+              icon: <TbZodiacCapricorn size={16} />,
+              path: "/components/sliders/zodiac",
             },
             {
               name: "Jewellry",
