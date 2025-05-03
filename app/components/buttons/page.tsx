@@ -39,9 +39,9 @@ export default function page() {
         background="#031228"
       />
       <CodePreview
-        code={Button4Code}
-        component={<Button4>Button 4</Button4>}
-        background="#eeeeee"
+        code={ContactButtonsCode}
+        component={<ContactButtons />}
+        background="#222222"
       />
       <CodePreview
         code={Button5Code}
@@ -98,9 +98,9 @@ export default function page() {
         background="#f8f8f8"
       />
       <CodePreview
-        code={ContactButtonsCode}
-        component={<ContactButtons />}
-        background="#222222"
+        code={Button4Code}
+        component={<Button4>Button 4</Button4>}
+        background="#eeeeee"
       />
     </div>
   );
