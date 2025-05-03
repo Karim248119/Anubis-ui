@@ -1,4 +1,6 @@
 import CodePreview from "@/components/CodePreview";
+import DownloadButton from "@/components/DownloadButton";
+import Collapse from "@/demo/collapse/Collapse";
 import Collapse1, { Collapse1Code } from "@/demo/collapse/Collapse1";
 import Collapse2, { Collapse2Code } from "@/demo/collapse/Collapse2";
 import Collapse3, { Collapse3Code } from "@/demo/collapse/Collapse3";
@@ -9,14 +11,17 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="w-full h-full space-y-5">
-      <CodePreview
-        className="overflow-hidden"
-        code={Collapse1Code}
-        component={<Collapse1 />}
-        componentClassName="h-screen w-full"
-        background="#000"
-      />
+    <div className="w-full h-full space-y-10">
+      <div>
+        <DownloadButton fileName="shapes.zip" fileUrl="/collapse/shapes.zip" />
+        <CodePreview
+          className="overflow-hidden"
+          code={Collapse1Code}
+          component={<Collapse1 />}
+          componentClassName="h-screen w-full"
+          background="#000"
+        />
+      </div>
       <CodePreview
         code={Collapse2Code}
         component={<Collapse2 />}
@@ -41,10 +46,19 @@ export default function page() {
         componentClassName="h-[70vh]"
         background="#fff"
       />
+      <div>
+        <DownloadButton fileName="collapse.zip" fileUrl="/collapse/vids.zip" />
+        <CodePreview
+          code={Collapse4Code}
+          component={<Collapse />}
+          componentClassName="h-[60vh]"
+          background="#000"
+        />
+      </div>
       <CodePreview
         code={Collapse4Code}
         component={<Collapse6 />}
-        componentClassName="h-[90vh]"
+        componentClassName="h-[70vh]"
         background="#fff"
       />
     </div>

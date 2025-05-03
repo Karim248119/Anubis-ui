@@ -30,7 +30,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
   };
 
   return (
-    <div className="mb-5">
+    <div className="mb-3">
       <H variant="assets">Assets</H>
       <button
         onClick={handleDownload}

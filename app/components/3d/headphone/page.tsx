@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div className="w-full h-full">
       <InstallCommand packages="@react-three/fiber@8.13.5 @react-three/drei@9.79.1" />
-      <DownloadButton fileName="headphone.glb" fileUrl="/3d/headphone2.glb" />
+      <DownloadButton fileName="headphone.zip" fileUrl="/3d/headphone2.zip" />
       <CodePreview
         code={HeadphoneCanvasCode}
         component={<HeadphoneCanvas />}
