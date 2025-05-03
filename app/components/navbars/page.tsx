@@ -1,4 +1,5 @@
 import CodePreview from "@/components/CodePreview";
+import InstallCommand from "@/components/InstallCommand";
 import Nav1, { Nav1Code } from "@/demo/navbars/Nav1";
 import Nav2, { Nav2Code } from "@/demo/navbars/Nav2";
 import Nav3, { Nav3Code } from "@/demo/navbars/Nav3";
@@ -8,6 +9,7 @@ import React from "react";
 export default function page() {
   return (
     <div className="w-full min-h-screen space-y-5">
+      <InstallCommand packages={"framer-motion"} />
       <CodePreview
         code={Nav1Code}
         className="h-[80vh] relative overflow-hidden"

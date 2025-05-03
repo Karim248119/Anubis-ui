@@ -207,7 +207,7 @@ function Shirt({
   x: number;
   size: number;
 }) {
-  const { scene } = useGLTF("/3d/shirt/scene.gltf");
+  const { scene } = useGLTF("/3d/shirt/shirt.glb");
   useMemo(() => {
     const box = new THREE.Box3().setFromObject(scene);
     const yOffset = box.min.y;
@@ -501,7 +501,7 @@ function Shirt({
   x: number;
   size: number;
 }) {
-  const { scene } = useGLTF("/3d/shirt/scene.gltf");
+  const { scene } = useGLTF("/3d/shirt/shirt.glb");
   useMemo(() => {
     const box = new THREE.Box3().setFromObject(scene);
     const yOffset = box.min.y;

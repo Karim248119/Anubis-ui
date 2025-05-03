@@ -11,7 +11,7 @@ export default function page() {
     <div className="w-full h-full space-y-10">
       <InstallCommand packages={"gsap"} />
       <div>
-        <H code>Code</H>
+        <H variant="code">Code</H>
         <CodePreview
           code={verticalSliderCode}
           codeOnly
@@ -19,7 +19,7 @@ export default function page() {
         />
       </div>
       <div className="w-full">
-        <H>Preview</H>
+        <H variant="preview">Preview</H>
         <VerticalScrollSlider />
       </div>
     </div>

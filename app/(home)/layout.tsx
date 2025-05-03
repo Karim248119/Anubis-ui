@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="/anubis.svg" sizes="any" />
       </head>
       <body
-        className={`${Fonts.quicksand.className} flex default:dark overflow-x-hidden`}
+        className={`${Fonts.quicksand.className} flex dark overflow-x-hidden`}
       >
         <Theme>
           {isHomePage ? (

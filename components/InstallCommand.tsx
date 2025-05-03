@@ -39,8 +39,8 @@ export default function InstallCommand({
   };
 
   return (
-    <div className=" mb-5 ">
-      <H install>Installation</H>
+    <div className=" mb-5">
+      <H variant="install">Installation</H>
       <div
         className={`rounded-lg border shadow-sm w-1/2 overflow-hidden ${className}`}
       >

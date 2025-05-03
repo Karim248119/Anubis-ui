@@ -63,6 +63,7 @@ const ProductsSlider = () => {
   return (
     <div className="relative w-full h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
       <AnimatePresence>
+        {/* content Section */}
         <div className="w-1/3 h-full relative ">
           <div
             key={index}
@@ -110,40 +111,22 @@ const ProductsSlider = () => {
           </div>
         </div>
       </AnimatePresence>
-      <div className="relative w-2/3 border-l border-black/50 h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
-        {/* content Section */}
-        <div className="w-full h-full overflow-hidden relative ">
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={Items[index].name}
-              variants={h1Variant}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ delay: 0.1, duration: 0.5, ease: "easeInOut" }}
-              onAnimationComplete={() => setIsAnimating(false)}
-              onAnimationStart={() => setIsAnimating(true)}
-              className="text-4xl capitalize font-montserrat"
-            >
-              {Items[index]?.name}
-            </motion.h1>
-          </AnimatePresence>
+      {/* img Section */}
 
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={Items[index].name + "-desc"}
-              variants={pVariant}
-              initial="initial"
-              animate="animate"
+      <div className="relative w-2/3 border-l border-black/50 h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
+        <div className="w-full h-full overflow-hidden relative ">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.img
+              key={index}
+              variants={variants}
+              initial="enter"
+              animate="center"
               exit="exit"
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
-              className="text-black/60 font-light text-sm"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis necessitatibus, quisquam maiores fugit dolorum porro
-              quis, aliquam omnis id, tempore quidem neque ipsa consequatur
-              iusto? Consectetur praesentium consequuntur tenetur sint.
-            </motion.p>
+              custom={direction}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="w-full h-full object-cover"
+              src={Items[index].img}
+            />
           </AnimatePresence>
         </div>
 
@@ -240,6 +223,7 @@ const ProductsSlider = () => {
   return (
     <div className="relative w-full h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
       <AnimatePresence>
+        {/* content Section */}
         <div className="w-1/3 h-full relative ">
           <div
             key={index}
@@ -287,40 +271,22 @@ const ProductsSlider = () => {
           </div>
         </div>
       </AnimatePresence>
-      <div className="relative w-2/3 border-l border-black/50 h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
-        {/* content Section */}
-        <div className="w-full h-full overflow-hidden relative ">
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={Items[index].name}
-              variants={h1Variant}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ delay: 0.1, duration: 0.5, ease: "easeInOut" }}
-              onAnimationComplete={() => setIsAnimating(false)}
-              onAnimationStart={() => setIsAnimating(true)}
-              className="text-4xl capitalize font-montserrat"
-            >
-              {Items[index]?.name}
-            </motion.h1>
-          </AnimatePresence>
+      {/* img Section */}
 
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={Items[index].name + "-desc"}
-              variants={pVariant}
-              initial="initial"
-              animate="animate"
+      <div className="relative w-2/3 border-l border-black/50 h-full overflow-hidden flex md:flex-row flex-col items-center justify-center bg-white text-black">
+        <div className="w-full h-full overflow-hidden relative ">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.img
+              key={index}
+              variants={variants}
+              initial="enter"
+              animate="center"
               exit="exit"
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
-              className="text-black/60 font-light text-sm"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis necessitatibus, quisquam maiores fugit dolorum porro
-              quis, aliquam omnis id, tempore quidem neque ipsa consequatur
-              iusto? Consectetur praesentium consequuntur tenetur sint.
-            </motion.p>
+              custom={direction}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="w-full h-full object-cover"
+              src={Items[index].img}
+            />
           </AnimatePresence>
         </div>
 
