@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
@@ -17,9 +18,11 @@ export default function Hero() {
           A futuristic UI library combining sleek design and developer-first
           components.
         </p>
-        <Button variant="link" className="md:w-96 w-60">
-          Get Started
-        </Button>
+        <Link href="/components/buttons">
+          <Button variant="link" className="md:w-96 w-60">
+            Get Started
+          </Button>
+        </Link>
       </div>
     </div>
   );

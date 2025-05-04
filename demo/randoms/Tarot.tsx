@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { TfiClose } from "react-icons/tfi";
 import localFont from "next/font/local";
@@ -193,10 +193,15 @@ const Card = ({ t, i }: { t: { name: string; img: string }; i: number }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          audioRef.current?.play();
+        }}
         key={i}
         className="absolute -bottom-10 origin-bottom  duration-1000"
         style={{
@@ -214,6 +219,7 @@ const Card = ({ t, i }: { t: { name: string; img: string }; i: number }) => {
       <AnimatePresence>
         {open && <Details i={i} setOpen={setOpen} />}
       </AnimatePresence>
+      <audio ref={audioRef} muted src="/random/tarot/flipcard.mp3"></audio>
     </>
   );
 };
