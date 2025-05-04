@@ -1,7 +1,7 @@
 import CodePreview from "@/components/CodePreview";
 import InvincibleSlider, {
   InvincibleSliderCode,
-} from "@/demo/sliders/Invincible";
+} from "@/demo/randoms/Invincible";
 import React from "react";
 
 export default function page() {

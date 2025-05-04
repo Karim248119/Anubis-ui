@@ -27,7 +27,13 @@ import {
   Images,
   MousePointer,
 } from "lucide-react";
-import { GiRingBox, GiThroneKing, GiZeusSword } from "react-icons/gi";
+import {
+  GiAllSeeingEye,
+  GiCardRandom,
+  GiRingBox,
+  GiThroneKing,
+  GiZeusSword,
+} from "react-icons/gi";
 import { RiGlassesFill } from "react-icons/ri";
 import { GiTable } from "react-icons/gi";
 import { MdOutlineTableBar, MdOutlineTravelExplore } from "react-icons/md";
@@ -173,11 +179,7 @@ export default function SideBar() {
               icon: <FaUserTie size={16} />,
               path: "/components/sliders/suits",
             },
-            {
-              name: "Invincible",
-              icon: <RiGlassesFill size={16} />,
-              path: "/components/sliders/invincible",
-            },
+
             {
               name: "Verical Scroll",
               icon: <PiMouseScrollLight size={16} />,
@@ -263,6 +265,16 @@ export default function SideBar() {
               name: "GOT",
               path: "/components/randoms/GOT",
               icon: <GiThroneKing size={16} />,
+            },
+            {
+              name: "Tarot",
+              path: "/components/randoms/tarot",
+              icon: <GiCardRandom size={16} />,
+            },
+            {
+              name: "Invincible",
+              icon: <RiGlassesFill size={16} />,
+              path: "/components/randoms/invincible",
             },
           ]}
         />
