@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import {
   Box,
-  FormInput,
   ListCollapse,
   Sliders,
   SquarePower,
@@ -23,23 +22,18 @@ import {
   MonitorSmartphone,
   Music,
   Puzzle,
-  Mouse,
   Images,
   MousePointer,
 } from "lucide-react";
-import {
-  GiAllSeeingEye,
-  GiCardRandom,
-  GiRingBox,
-  GiThroneKing,
-  GiZeusSword,
-} from "react-icons/gi";
+import { GiCardRandom, GiRingBox, GiThroneKing } from "react-icons/gi";
 import { RiGlassesFill } from "react-icons/ri";
-import { GiTable } from "react-icons/gi";
+import { TbArrowsExchange } from "react-icons/tb";
 import { MdOutlineTableBar, MdOutlineTravelExplore } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa6";
-import { PiMouseScrollLight } from "react-icons/pi";
 import { TbZodiacCapricorn } from "react-icons/tb";
+import { CgScrollH, CgScrollV } from "react-icons/cg";
+import { TbSkewX } from "react-icons/tb";
+import { SiAxios } from "react-icons/si";
 
 // === Single Link Item ===
 const NavItem = ({
@@ -135,13 +129,13 @@ const CollapsibleNavItem = ({
 export default function SideBar() {
   return (
     <aside
-      className="w-[15vw] h-full pb-5 pt-32 pl-10 border-r fixed overflow-y-auto z-40"
+      className="w-[15vw] h-full pb-5 pt-32  border-r fixed overflow-y-auto z-40"
       style={{
         //hide scrollbar
         scrollbarWidth: "none",
       }}
     >
-      <nav className="flex flex-col w-[10vw]">
+      <nav className="flex flex-col w-[12vw] mx-auto">
         <NavItem
           href="/components/buttons"
           icon={<SquarePower />}
@@ -182,8 +176,23 @@ export default function SideBar() {
 
             {
               name: "Verical Scroll",
-              icon: <PiMouseScrollLight size={16} />,
+              icon: <CgScrollV size={16} />,
               path: "/components/sliders/vertical-scroll",
+            },
+            {
+              name: "Horizontal Scroll",
+              icon: <CgScrollH size={16} />,
+              path: "/components/sliders/horizontal-scroll",
+            },
+            {
+              name: "Skew Horizontal",
+              icon: <TbSkewX size={16} />,
+              path: "/components/sliders/skew-horizontal",
+            },
+            {
+              name: "Parallax",
+              icon: <TbArrowsExchange size={16} />,
+              path: "/components/sliders/parallex-horizontal",
             },
             {
               name: "Gallery",

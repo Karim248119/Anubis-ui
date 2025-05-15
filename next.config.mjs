@@ -8,6 +8,7 @@ const nextConfig = {
       "cdn.prod.website-files.com",
       "picsum.photos",
       "s.alicdn.com",
+      "images.unsplash.com",
     ],
   },
 };

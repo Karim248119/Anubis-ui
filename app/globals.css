@@ -154,3 +154,7 @@ input[type="range"]::-moz-range-thumb {
   background: transparent !important;
   border: none !important;
 }
+[data-scroll-container] {
+  height: 100%;
+  overflow: auto;
+}

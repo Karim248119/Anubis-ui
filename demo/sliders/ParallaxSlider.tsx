@@ -80,11 +80,14 @@ const ease = 0.06;
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalScroll: React.FC = () => {
+const ParallaxSlider: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLDivElement[]>([]);
-
+  let sliderWidth = 0;
+  let imageWidth = 0;
+  let current = 0;
+  let target = 0;
   useLayoutEffect(() => {
     if (!containerRef.current || !sliderRef.current) return;
 
@@ -93,15 +96,15 @@ const HorizontalScroll: React.FC = () => {
     const totalScroll = slider.scrollWidth - container.clientWidth;
 
     const ctx = gsap.context(() => {
-      // Pin the slider section
+      // Pin and scroll horizontally with smooth scrub
       gsap.to(slider, {
         x: () => -totalScroll,
-        ease: "none",
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: container,
           start: "top top",
           end: () => `+=${totalScroll}`,
-          scrub: true,
+          scrub: 1.5, // <-- smoother scrub
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -109,15 +112,15 @@ const HorizontalScroll: React.FC = () => {
       });
 
       // Parallax effect for images
-      imageRefs.current.forEach((image, i) => {
+      imageRefs.current.forEach((image) => {
         gsap.to(image, {
-          xPercent: -20,
-          ease: "none",
+          xPercent: -30,
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: container,
             start: "top top",
             end: () => `+=${totalScroll}`,
-            scrub: true,
+            scrub: 1.5,
             invalidateOnRefresh: true,
           },
         });
@@ -135,19 +138,21 @@ const HorizontalScroll: React.FC = () => {
       <div
         ref={sliderRef}
         className="flex h-full items-center gap-5 select-none"
-        style={{ width: `${photos.length * 30}vw` }}
+        style={{ width: `${photos.length * 20}vw` }}
       >
         {photos.map((photo, idx) => (
           <div
             key={idx}
-            className="relative w-[30vw] h-[50vh] overflow-hidden bg-white"
+            className="relative w-[20vw] h-[50vh] overflow-hidden bg-white"
           >
             <div
               ref={(el) => {
                 if (el) imageRefs.current[idx] = el;
               }}
-              className="absolute left-[-10vw] w-[50vw] h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${photo.url})` }}
+              className="img absolute left-[-10vw] w-[60vw] h-full bg-cover bg-center duration-100 ease-in-out"
+              style={{
+                backgroundImage: `url(${photo.url})`,
+              }}
               aria-label={photo.description}
             />
           </div>
@@ -157,4 +162,4 @@ const HorizontalScroll: React.FC = () => {
   );
 };
 
-export default HorizontalScroll;
+export default ParallaxSlider;

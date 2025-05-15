@@ -93,33 +93,41 @@ const HorizontalScroll: React.FC = () => {
     const totalScroll = slider.scrollWidth - container.clientWidth;
 
     const ctx = gsap.context(() => {
-      // Pin the slider section
-      gsap.to(slider, {
+      const scrollTween = gsap.to(slider, {
         x: () => -totalScroll,
         ease: "none",
         scrollTrigger: {
           trigger: container,
           start: "top top",
           end: () => `+=${totalScroll}`,
-          scrub: true,
+          scrub: 1.5,
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onUpdate: (self) => {
+            const velocity = self.getVelocity(); // scroll velocity
+            const skew = gsap.utils.clamp(-50, 50, velocity / 100); // limit skew
+
+            // apply skew to all image blocks
+            imageRefs.current.forEach((el) => {
+              gsap.to(el, {
+                skewX: skew,
+                duration: 0.3,
+                ease: "power3.out",
+              });
+            });
+          },
         },
       });
 
-      // Parallax effect for images
-      imageRefs.current.forEach((image, i) => {
-        gsap.to(image, {
-          xPercent: -20,
-          ease: "none",
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: () => `+=${totalScroll}`,
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
+      // Reset skewX when scroll stops
+      ScrollTrigger.addEventListener("scrollEnd", () => {
+        imageRefs.current.forEach((el) => {
+          gsap.to(el, {
+            skewX: 0,
+            duration: 0.6,
+            ease: "power3.out",
+          });
         });
       });
     }, container);
@@ -138,10 +146,7 @@ const HorizontalScroll: React.FC = () => {
         style={{ width: `${photos.length * 30}vw` }}
       >
         {photos.map((photo, idx) => (
-          <div
-            key={idx}
-            className="relative w-[30vw] h-[50vh] overflow-hidden bg-white"
-          >
+          <div key={idx} className="relative w-[30vw] h-[50vh] overflow-hidden">
             <div
               ref={(el) => {
                 if (el) imageRefs.current[idx] = el;
